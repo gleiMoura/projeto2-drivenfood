@@ -7,56 +7,104 @@
     <title>FoodBox</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@700&family=Mochiy+Pop+P+One&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@700&family=Mochiy+Pop+P+One&family=Righteous&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@700&family=Mochiy+Pop+P+One&family=Righteous&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body onload="mudarDisplay()">
     <header>
         <h1>FoodBox</h1>
-        <h2>Sua comida rápida</h2>
+        <h2>Sua comida em 6 minutos</h2>
     </header>
 
     <main>
-        <h4><b>Comece pelo seu prato!</b></h4>
+        <h3><b>Comece pelo seu prato!</b></h3>
+        
         <section>
-            <div class="plate">
-                <img src="plate1.png"/>
-                <h3><b>Alice Springs</b></h3>
-                <p>Suculento peito de frango 
-                    grelhado e temperado com 
-                    o molho Honey Mustard e 
-                    coberto de bacon.
-                </p>
-                <div class="price1"></div>
-            </div>
-            <div class="plate">
-                <img src="plate2.png"/>
-                <h3><b>Alice Springs</b></h3>
-                <p>Suculento peito de frango 
-                    grelhado e temperado com 
-                    o molho Honey Mustard e 
-                    coberto de bacon.
-                </p>
-                <div class="price2"></div>
-            </div>
-            <div class="plate">
-                <img src="plate3.png"/>
-                <h3><b>Alice Springs</b></h3>
-                <p>Suculento peito de frango 
-                    grelhado e temperado com 
-                    o molho Honey Mustard e 
-                    coberto de bacon.
-                </p>
-                <div class="price3"></div>
-            </div>
+            <label for="plate">
+                <input  type="checkbox" id="plate" value="plate1"/>
+                <div class="plate green_border">
+                    <img src="plate1.png"/>
+                    <h4><b>Alice Springs</b></h4>
+                    <p>Suculento peito de frango 
+                        grelhado e temperado com 
+                        o molho Honey Mustard e 
+                        coberto de bacon.
+                    </p>
+                    <div class="price1"></div> 
+                    <div class="selected" id="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+            <label for="plate">
+                <input  type="checkbox" id="plate" value="plate1"/>
+                <div class="plate green_border">
+                    <img src="plate1.png"/>
+                    <h4><b>Alice Springs</b></h4>
+                    <p>Suculento peito de frango 
+                        grelhado e temperado com 
+                        o molho Honey Mustard e 
+                        coberto de bacon.
+                    </p>
+                    <div class="price1"></div> 
+                    <div class="selected" id="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+            <label for="plate">
+                <input  type="checkbox" id="plate" value="plate1"/>
+                <div class="plate green_border">
+                    <img src="plate1.png"/>
+                    <h4><b>Alice Springs</b></h4>
+                    <p>Suculento peito de frango 
+                        grelhado e temperado com 
+                        o molho Honey Mustard e 
+                        coberto de bacon.
+                    </p>
+                    <div class="price1"></div> 
+                    <div class="selected" id="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+            <label for="plate">
+                <input  type="checkbox" id="plate" value="plate1"/>
+                <div class="plate green_border">
+                    <img src="plate1.png"/>
+                    <h4><b>Alice Springs</b></h4>
+                    <p>Suculento peito de frango 
+                        grelhado e temperado com 
+                        o molho Honey Mustard e 
+                        coberto de bacon.
+                    </p>
+                    <div class="price1"></div> 
+                    <div class="selected" id="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+            <label for="plate">
+                <input  type="checkbox" id="plate" value="plate1"/>
+                <div class="plate green_border">
+                    <img src="plate1.png"/>
+                    <h4><b>Alice Springs</b></h4>
+                    <p>Suculento peito de frango 
+                        grelhado e temperado com 
+                        o molho Honey Mustard e 
+                        coberto de bacon.
+                    </p>
+                    <div class="price1"></div> 
+                    <div class="selected" id="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+
+            
+
+            
         </section>
 
-        <h4><b>Escolha uma bebida!</b></h4>
+        <h3><b>Escolha uma bebida!</b></h3>
         <section>
             <div class="plate">
                 <img src="plate4.png"/>
-                <h3><b>Margarita Trio</b></h3>
+                <h4><b>Margarita Trio</b></h4>
                 <p>Trio de margaritas ideal pra 
                     compartilhar com seus mates. 
                     Escolha três sabores entre: 
@@ -65,10 +113,12 @@
                     Blue.
                 </p>
                 <div class="price4"></div>
+                <div class="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
+
             </div>
             <div class="plate">
                 <img src="plate5.png"/>
-                <h3><b>Wallaby Darned</b></h3>
+                <h4><b>Wallaby Darned</b></h4>
                 <p>Frozen com uma combinação 
                     irresistível de espumante, 
                     pêssego, vodka e Outback Secret 
@@ -77,10 +127,12 @@
                     Bellini do famoso Harry's Bar
                 </p>
                 <div class="price5"></div>
+                <div class="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
+
             </div>
             <div class="plate">
                 <img src="plate6.png"/>
-                <h3><b>Gold Coast Rita</b></h3>
+                <h4><b>Gold Coast Rita</b></h4>
                 <p>Um dos drinks mais pedidos da 
                     casa, nossa refrescante margarita 
                     frozen é preparada com tequila nobre
@@ -88,14 +140,15 @@
                     ingredientes exclusivos do Outback.
                 </p>
                 <div class="price6"></div>
+                <div class="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
             </div>
         </section>
 
-        <h4><b>Por fim, sua sobremesa!</b></h4>
+        <h3><b>Por fim, sua sobremesa!</b></h3>
         <section>
             <div class="plate">
                 <img src="plate7.png"/>
-                <h3><b>Chocolate Thunder</b></h3>
+                <h4><b>Chocolate Thunder</b></h4>
                 <p>Nosso brownie exclusivo e quentinho
                     com sorvete de baunilha e deliciosa 
                     calda de chocolate preparada diariamente
@@ -103,10 +156,11 @@
                     raspas de chocolate.
                 </p>
                 <div class="price7"></div>
+                <div class="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
             </div>
             <div class="plate">
                 <img src="plate8.png"/>
-                <h3><b>S’mores Outback</b></h3>
+                <h4><b>S’mores Outback</b></h4>
                 <p>Uma sobremesa quente, que combina 
                     cookies com gotas de chocolate, uma
                     surpreendente pasta cremosa de Kit 
@@ -114,10 +168,11 @@
                     calda de chocolate e pedaços de Kit Kat
                 </p>
                 <div class="price8"></div>
+                <div class="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
             </div>
             <div class="plate">
                 <img src="plate9.png"/>
-                <h3><b>Havanna Thunder</b></h3>
+                <h4><b>Havanna Thunder</b></h4>
                 <p>O nosso brownie, com nozes pecans, 
                     agora em uma versão de doce de leite
                     Havanna. Servido com sorvete de 
@@ -126,11 +181,19 @@
                     Havanna.
                 </p>
                 <div class="price9"></div>
+                <div class="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
             </div>
         </section>
-</main>
+    </main>
+
     <footer>
-        <button>Fechar Pedido</button>
+            <label class="botao">
+                <input type="checkbox" value="footer">
+                <h4>Selecione 3 itens <br> para fechar o pedido</h4>
+            </label>
     </footer>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="food.js"></script>
 </body>
 </html>
