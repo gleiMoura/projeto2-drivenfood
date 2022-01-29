@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodBox</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@700&family=Mochiy+Pop+P+One&family=Righteous&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@700&family=Mochiy+Pop+P+One&family=Righteous&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>FoodBox</h1>
+        <h2>Sua comida em 6 minutos</h2>
+    </header>
+
+    <!--Button that only appear when the person choose all tree options-->
+    <div class="confirm_order confirm_order_none" data-identifier="confirmation-dialog">
+        <h2>Confirme o seu pedido</h2>
+        <div class="organize">
+            <div class="names">
+                <h2><div class="dish_name">1</div></h2>
+                <h2><div class="drink_name">2</div></h2>
+                <h2><div class="dessert_name">3</div></h2>
+                <h2><div space>TOTAL</div></h2>
+            </div>
+            <div class="prices">
+                <h2><div class="price_dish">1</div></h2>
+                <h2><div class = "price_drink">2</div></h2>
+                <h2><div class = "price_dessert">3</div></h2>
+                <h2><div class="total">4</div></h2>
+            </div>
+        </div>
+        <a class="zap"><button class="send_it"><h2>Tudo certo, pode pedir</h2></button></a>
+        <a href="http://127.0.0.1:5500/index.html" class="cancel" ><h2>cancelar</h2></a>
+    </div>
+
+    <main>
+        <h3><b>Comece pelo seu prato!</b></h3>
+        
+        <section data-identifier = "dishes"><!--Here begin the fodd section one-->
+            <label for="radio1">
+                <input  type="radio" id="radio1" class="radio radio_first_section" name="radio_first_section" onclick="check('dish','Alice Spring',29.90)">
+                <div class="plate1 plate" data-identifier="food-option">
+                    <img src="images/dish1.png"/>
+                    <h4 data-identifier="food-title"><b>Alice Springs</b></h4>
+                    <p>Suculento peito de frango 
+                        grelhado e temperado com 
+                        o molho Honey Mustard e 
+                        coberto de bacon.
+                    </p>
+                    <div class="price" ata-identifier="food-price">R$ 29,90</div> 
+                    <div class="selected selected_none" id="selected"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+            
+            <label for="radio2">
+                <input  type="radio"id="radio2" class="radio radio_first_section" name="radio_first_section" onclick="check('dish','Pato com Laranja', 30)"/>
+                <div class="plate2 plate" data-identifier="food-option">
+                    <img src="images/dish2.png"/>
+                    <h4 data-identifier="food-title"><b>Pato com Laranja</b></h4>
+                    <p> Este é um prato maravilhoso que contém
+                        carne de pato com um molho maravilhoso 
+                        a base de laranja. Maravilhoso!
+                    </p>
+                    <div class="price" ata-identifier="food-price">R$ 30,00</div> 
+                    <div class="selected selected_none"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+
+            <label for="radio3">
+                <input  type="radio" id="radio3" class="radio radio_first_section" name="radio_first_section" onclick="check('dish','Batatão Gigante',23.90)"/>
+                <div class="plate3 plate" data-identifier="food-option">
+                    <img src="images/dish3.png"/>
+                    <h4 data-identifier="food-title"><b>Batatão Gigante</b></h4>
+                    <p>Está pronto para comer a maior batata recheada
+                        da sua vida? Essa batata vem recheada com bacon
+                        e requeijão.
+                    </p>
+                    <div class="price" ata-identifier="food-price">R$ 23,90</div> 
+                    <div class="selected selected_none"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+        </section>
+
+        <h3><b>Escolha uma bebida!</b></h3>
+        <section data-identifier="drinks"><!--Here begins the food section two-->
+
+            <label for="radio6">
+                <input  type="radio" id="radio6" class="radio radio_second_section" name="radio_second_section" onclick="check('drink','Margarita Trio', 18.90)"/>
+                <div class="plate6 plate" data-identifier="food-option">
+                    <img src="images/dish6.png">
+                    <h4 data-identifier="food-title"><b>Margarita Trio</b></h4>
+                    <p>Trio de margaritas ideal pra 
+                            compartilhar com seus mates. 
+                            Escolha três sabores entre: 
+                            Tradicional, Strawberry, 
+                            Cranberry.
+                    </p>
+                    <div class="price" ata-identifier="food-price">R$ 18.90</div> 
+                    <div class="selected selected_none"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+
+            <label for="radio7">
+                <input  type="radio" id="radio7" class=" radio radio_second_section" name="radio_second_section" onclick="check('drink', 'Wallaby Darned', 20)"/>
+                <div class="plate7 plate" data-identifier="food-option">
+                    <img src="images/dish7.png"/>
+                    <h4 data-identifier="food-title"><b>Wallaby Darned</b></h4>
+                    <p>Frozen com uma combinação 
+                        irresistível de espumante, 
+                        pêssego, vodka e Outback Secret 
+                        Mixers. 
+                    </p>
+                    <div class="price" ata-identifier="food-price">R$ 20,00</div> 
+                    <div class="selected selected_none"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+
+            <label for="radio8">
+                <input  type="radio" id="radio8" class=" radio radio_second_section" name="radio_second_section" onclick="check('drink','Gold Coast Rita', 31.90)"/>
+                <div class="plate8 plate" data-identifier="food-option">
+                    <img src="images/dish8.png"/>
+                    <h4 data-identifier="food-title"><b>Gold Coast Rita</b></h4>
+                    <p>Um dos drinks mais pedidos da 
+                        casa, nossa refrescante margarita 
+                        frozen é preparada com tequila nobre
+                        do México e licor triple sec.
+                    </p>
+                    <div class="price" ata-identifier="food-price">R$ 31,90</div> 
+                    <div class="selected selected_none"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+        </section>
+
+        <h3><b>Por fim, sua sobremesa!</b></h3>
+        <section data-identifier="desserts">
+            <label for="radio11">
+                <input  type="radio" id="radio11" class="radio radio_third_section" name="radio_third_section" onclick="check('dessert','Chocolate Thunder', 50.90)"/>
+                <div class="plate" data-identifier="food-option">
+                    <img src="images/dish11.png"/>
+                    <h4 data-identifier="food-title"><b>Chocolate Thunder</b></h4>
+                    <p>Nosso brownie exclusivo e quentinho
+                        com sorvete de baunilha e deliciosa 
+                        calda de chocolate.
+                    </p>
+                    <div class= "price" ata-identifier="food-price">R$ 50,90</div>
+                    <div class="selected selected_none"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+
+            <label for="radio12">
+                <input  type="radio" id="radio12" class="radio radio_third_section" name="radio_third_section" onclick="check('dessert','Smores Outback',10.90)"/>
+                <div class="plate" data-identifier="food-option">
+                    <img src="images/dish12.png"/>
+                    <h4 data-identifier="food-title"><b>Smores Outback</b></h4>
+                    <p>Uma sobremesa quente, que combina 
+                        cookies com gotas de chocolate, uma
+                        surpreendente pasta cremosa de Kit 
+                        Kat.
+                    </p>
+                    <div class="price" ata-identifier="food-price">R$ 10,90</div>
+                    <div class="selected selected_none"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+            </label>
+            <label for="radio13">
+                <input  type="radio" id="radio13" class="radio radio_third_section" name="radio_third_section" onclick="check('dessert','Havanna Thunder',20.90)"/>
+                <div class="plate" data-identifier="food-option">
+                    <img src="images/dish13.png"/>
+                    <h4 data-identifier="food-title"><b>Havanna Thunder</b></h4>
+                    <p>O nosso brownie, com nozes pecans, 
+                        agora em uma versão de doce de leite
+                        Havanna. 
+                    </p>
+                    <div class="price" ata-identifier="food-price">R$ 20,90</div>
+                    <div class="selected selected_none"><ion-icon name="checkmark-circle"></ion-icon></div>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <label for="finish_order">
+            <input type="checkbox" id="finish_order" onchange="check()">
+                <h5 class="button"></h5>
+        </label>
+    </footer>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="food.js"></script>
+</body>
+</html>
