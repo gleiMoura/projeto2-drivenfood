@@ -117,8 +117,8 @@ for(let y=0; y < allRadios3.length; y++){
             price_dessert.innerHTML= price_dessert_selected.toFixed(2);
             total.innerHTML = "R$ "+ Total.toFixed(2);
             hide.classList.remove("hide_none");
-            
         }
+
         input_button.checked = false;
         zap.href = "https://wa.me/+5521998199049?text=" + encodeURIComponent(order + "\n nome: " + your_name +"\n endereço: " + your_address);
 
