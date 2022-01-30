@@ -119,15 +119,6 @@ section{
     border: 4px solid #32B72F;
 }
 
-.hide{
-    width: 16px;
-   height: 16px;
-   color:#32B72F;
-   position: absolute;
-   bottom:6px;
-   right: 9px;
-   display:none;
-}
 footer{
     width: 100%;
     height: 82px;
@@ -181,7 +172,7 @@ footer{
     position: fixed;
     left:10%;
     top:20%;
-    z-index: 1;
+    z-index: 3;
     border-radius: 20px;
 }
 .confirm_order_none{
@@ -230,4 +221,14 @@ footer{
 }
 a{
     text-decoration: none;
+}
+.hide{
+    width:100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.57);
+    position: fixed;
+    z-index: 2;
+}
+.hide_none{
+    display: none;
 }

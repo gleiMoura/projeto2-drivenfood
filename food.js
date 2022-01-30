@@ -31,7 +31,9 @@ let price_dessert = document.querySelector(".price_dessert");
 let total = document.querySelector(".total")
 
 let zap = document.querySelector(".zap");
-
+let hide = document.querySelector(".hide");
+let your_name = "";
+let your_address = "";
 
 
 function check(type, foodName, price) { //function to get the informations
@@ -86,7 +88,7 @@ for(let y=0; y < allRadios3.length; y++){
 
     let Total = price_dish_selected + price_drink_selected + price_dessert_selected;
 
-    let order = encodeURIComponent("Olá, gostaria de fazer o pedido: \n- Prato: " + dishName_selected+ " \n- Bebida: "+drinkName_selected + " \n- Sobremesa: "+ dessertName_selected+" \nTotal: R$ "+ Total);
+    let order = "Olá, gostaria de fazer o pedido: \n- Prato: " + dishName_selected+ " \n- Bebida: "+drinkName_selected + " \n- Sobremesa: "+ dessertName_selected+" \nTotal: R$ "+ Total;
 
    
 
@@ -104,8 +106,8 @@ for(let y=0; y < allRadios3.length; y++){
 
         
         if(y === 3 && input_button.checked){
-           // your_name = prompt('Qual é o seu nome?');
-           // your_address = prompt(your_name + ', qual é o seu endereço?')
+            your_name = prompt('Qual é o seu nome?');
+            your_address = prompt(your_name + ', qual é o seu endereço?')
             confirm_order.classList.remove("confirm_order_none");
             dish_name.innerHTML = dishName_selected;
             drink_name.innerHTML = drinkName_selected;
@@ -114,10 +116,14 @@ for(let y=0; y < allRadios3.length; y++){
             price_drink.innerHTML = price_drink_selected.toFixed(2);
             price_dessert.innerHTML= price_dessert_selected.toFixed(2);
             total.innerHTML = "R$ "+ Total.toFixed(2);
-            zap.href = "https://wa.me/+5521998199049?text=" + order;
+            hide.classList.remove("hide_none");
+            
         }
         input_button.checked = false;
+        zap.href = "https://wa.me/+5521998199049?text=" + encodeURIComponent(order + "\n nome: " + your_name +"\n endereço: " + your_address);
 
+        console.log(your_name);
+            console.log(your_address);
 
 }
 check();
